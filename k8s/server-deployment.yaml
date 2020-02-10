@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: server-deployment
 spec:
+  replicas: 3
   selector:
     matchLabels:
       component: server
@@ -13,11 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: blackflame007/multi-server
-          # resources:
-          #   limits:
-          #     memory: "128Mi"
-          #     cpu: "500m"
+          image: stephengrider/multi-server
           ports:
             - containerPort: 5000
           env:
