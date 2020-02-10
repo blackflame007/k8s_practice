@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: stephengrider/multi-server
+          image: blackflame007/multi-server
           resources:
             limits:
               memory: "128Mi"
